@@ -70,7 +70,7 @@ public class EmailAttachmentReceiver {
             // fetches new messages from server
             Message[] arrayMessages = folderInbox.getMessages();
 
-            for (int i = 0; i <1; i++) {
+            for (int i = 0; i <arrayMessages.length; i++) {
                 Message message = arrayMessages[i];
                 Address[] fromAddress = message.getFrom();
                 String from = fromAddress[0].toString();
@@ -142,7 +142,7 @@ public class EmailAttachmentReceiver {
         String port = "993";
         String userName = "myemail@gmail.com";
         String password = "mypassword";
-
+        //enable less secure app access in gmail settings
         String saveDirectory = "D:/Path to save";
 
         EmailAttachmentReceiver receiver = new EmailAttachmentReceiver();
